@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50A365A-5577-4C8D-890A-951BFD8F505B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>POS2.My.MyApplication</StartupObject>
+    <RootNamespace>POS2</RootNamespace>
+    <AssemblyName>POS2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>POS2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>POS2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.0.95.4\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.Charts.WinForms">
+      <HintPath>C:\Users\Admin\Desktop\DI SURE\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Admin\Desktop\DI SURE\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Downloads\mysql.data.8.0.21\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConnectionModule.vb" />
+    <Compile Include="LoadingScreen.Designer.vb">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI_Form.Designer.vb">
+      <DependentUpon>MDI_Form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MDI_Form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SUB FORMS\ActivationFrm.Designer.vb">
+      <DependentUpon>ActivationFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ActivationFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\AddProduct.Designer.vb">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\AddProduct.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\CategoryFrm.Designer.vb">
+      <DependentUpon>CategoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\CategoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\CouponFrm.Designer.vb">
+      <DependentUpon>CouponFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\CouponFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\InventoryFrm.Designer.vb">
+      <DependentUpon>InventoryFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\InventoryFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\ModifiersFrm.Designer.vb">
+      <DependentUpon>ModifiersFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ModifiersFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\OutletHeaderFrm.Designer.vb">
+      <DependentUpon>OutletHeaderFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\OutletHeaderFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\PaymentMethodFrm.Designer.vb">
+      <DependentUpon>PaymentMethodFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\PaymentMethodFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\ProductsFrm.Designer.vb">
+      <DependentUpon>ProductsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ProductsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\ReceiptDetailsFrm.Designer.vb">
+      <DependentUpon>ReceiptDetailsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ReceiptDetailsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\ReceiptSettings.Designer.vb">
+      <DependentUpon>ReceiptSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ReceiptSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\ScriptRunnerFrm.Designer.vb">
+      <DependentUpon>ScriptRunnerFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\ScriptRunnerFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\SettingsFrm.Designer.vb">
+      <DependentUpon>SettingsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\SettingsFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUB FORMS\UserFrm.Designer.vb">
+      <DependentUpon>UserFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUB FORMS\UserFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidationModule.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoadingScreen.resx">
+      <DependentUpon>LoadingScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI_Form.resx">
+      <DependentUpon>MDI_Form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ActivationFrm.resx">
+      <DependentUpon>ActivationFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\AddProduct.resx">
+      <DependentUpon>AddProduct.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\CategoryFrm.resx">
+      <DependentUpon>CategoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\CouponFrm.resx">
+      <DependentUpon>CouponFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\InventoryFrm.resx">
+      <DependentUpon>InventoryFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ModifiersFrm.resx">
+      <DependentUpon>ModifiersFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\OutletHeaderFrm.resx">
+      <DependentUpon>OutletHeaderFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\PaymentMethodFrm.resx">
+      <DependentUpon>PaymentMethodFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ProductsFrm.resx">
+      <DependentUpon>ProductsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ReceiptDetailsFrm.resx">
+      <DependentUpon>ReceiptDetailsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ReceiptSettings.resx">
+      <DependentUpon>ReceiptSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\ScriptRunnerFrm.resx">
+      <DependentUpon>ScriptRunnerFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\SettingsFrm.resx">
+      <DependentUpon>SettingsFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUB FORMS\UserFrm.resx">
+      <DependentUpon>UserFrm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

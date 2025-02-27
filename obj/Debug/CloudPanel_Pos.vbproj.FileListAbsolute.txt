@@ -1,0 +1,109 @@
+D:\Projects & Repo\POS2\bin\Debug\POS2.exe.config
+D:\Projects & Repo\POS2\bin\Debug\POS2.exe
+D:\Projects & Repo\POS2\bin\Debug\POS2.pdb
+D:\Projects & Repo\POS2\bin\Debug\POS2.xml
+D:\Projects & Repo\POS2\bin\Debug\MySql.Data.dll
+D:\Projects & Repo\POS2\bin\Debug\Zstandard.Net.dll
+D:\Projects & Repo\POS2\bin\Debug\Ubiety.Dns.Core.dll
+D:\Projects & Repo\POS2\bin\Debug\System.Buffers.dll
+D:\Projects & Repo\POS2\bin\Debug\MySql.Data.xml
+D:\Projects & Repo\POS2\obj\Debug\CloudPanel_Pos.vbproj.AssemblyReference.cache
+D:\Projects & Repo\POS2\obj\Debug\POS2.MainForm.resources
+D:\Projects & Repo\POS2\obj\Debug\POS2.Resources.resources
+D:\Projects & Repo\POS2\obj\Debug\CloudPanel_Pos.vbproj.GenerateResource.cache
+D:\Projects & Repo\POS2\obj\Debug\CloudPanel_Pos.vbproj.CoreCompileInputs.cache
+D:\Projects & Repo\POS2\obj\Debug\CloudPanel_Pos.vbproj.CopyComplete
+D:\Projects & Repo\POS2\obj\Debug\POS2.exe
+D:\Projects & Repo\POS2\obj\Debug\POS2.xml
+D:\Projects & Repo\POS2\obj\Debug\POS2.pdb
+D:\Projects & Repo\POS2\obj\Debug\POS2.Form1.resources
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\POS2.exe.config
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\POS2.exe
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\POS2.pdb
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\POS2.xml
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\Zstandard.Net.dll
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\System.Buffers.dll
+C:\Users\Development PC\Documents\GitHub\POS\bin\Debug\MySql.Data.xml
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.AssemblyReference.cache
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.Form1.resources
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.MainForm.resources
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.Resources.resources
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.GenerateResource.cache
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.CoreCompileInputs.cache
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.CopyComplete
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.exe
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.xml
+C:\Users\Development PC\Documents\GitHub\POS\obj\Debug\POS2.pdb
+D:\Projects & Repo\POS2\bin\Debug\ClosedXML.dll
+D:\Projects & Repo\POS2\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Projects & Repo\POS2\bin\Debug\ExcelNumberFormat.dll
+D:\Projects & Repo\POS2\bin\Debug\ClosedXML.pdb
+D:\Projects & Repo\POS2\bin\Debug\ClosedXML.xml
+D:\Projects & Repo\POS2\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Projects & Repo\POS2\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\POS2.exe.config
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\POS2.exe
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\POS2.pdb
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\POS2.xml
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\ClosedXML.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\ExcelNumberFormat.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\Zstandard.Net.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\System.Buffers.dll
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\ClosedXML.pdb
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\ClosedXML.xml
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\ExcelNumberFormat.xml
+C:\Users\ADMIN\Documents\GitHub\POS\bin\Debug\MySql.Data.xml
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbprojAssemblyReference.cache
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.Form1.resources
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.MainForm.resources
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.Resources.resources
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.GenerateResource.cache
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\CloudPanel_Pos.vbproj.CopyComplete
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.exe
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.xml
+C:\Users\ADMIN\Documents\GitHub\POS\obj\Debug\POS2.pdb
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\POS2.exe.config
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\POS2.exe
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\POS2.pdb
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\POS2.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\ClosedXML.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\ExcelNumberFormat.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\Zstandard.Net.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\Ubiety.Dns.Core.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\System.Buffers.dll
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\ClosedXML.pdb
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\ClosedXML.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\ExcelNumberFormat.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\bin\Debug\MySql.Data.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\CloudPanel_Pos.vbproj.AssemblyReference.cache
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.MainForm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.MDI_FORM.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.Resources.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\CloudPanel_Pos.vbproj.GenerateResource.cache
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\CloudPanel_Pos.vbproj.CoreCompileInputs.cache
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\CloudPanel_Pos.vbproj.CopyComplete
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.exe
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.xml
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.pdb
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.UserFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ProductsFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.CategoryFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ActivationFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.OutletHeaderFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ReceiptSettings.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ReceiptDetailsFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.CouponFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.InventoryFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.PaymentMethodFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ModifiersFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.AddProduct.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.SettingsFrm.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.LoadingScreen.resources
+D:\Github Projects\DGPOS-V2-Web-Panel\obj\Debug\POS2.ScriptRunnerFrm.resources
