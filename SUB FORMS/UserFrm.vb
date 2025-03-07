@@ -1,4 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
+Imports BCrypt.Net.BCrypt
 
 Public Class UserFrm
     Private IsEditMode As Boolean = False
@@ -70,6 +71,18 @@ Public Class UserFrm
     End Sub
 
     Private Sub InsertUser()
+        ' Hash password and PIN
+        Dim hashedPassword As String
+        Dim hashedPin As String
+        Try
+            hashedPassword = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text.Trim())
+            hashedPin = BCrypt.Net.BCrypt.HashPassword(txtPin.Text.Trim())
+        Catch ex As Exception
+            MessageBox.Show("Error occurred while processing your information. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            ' You can add logging here similar to Register form
+            Return
+        End Try
+
         Dim query As String = "INSERT INTO 02_pos_users (user_id, username, password, user_pin, fullname, email, position, gender, creator_id, created_date, status) " &
                            "VALUES (@user_id, @username, @password, @user_pin, @fullname, @email, @position, @gender, @creator_id, @created_date, @status)"
 
@@ -77,8 +90,8 @@ Public Class UserFrm
             Using cmd As New MySqlCommand(query, connection)
                 cmd.Parameters.AddWithValue("@user_id", GenerateUserId())
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim())
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim())
-                cmd.Parameters.AddWithValue("@user_pin", txtPin.Text.Trim())
+                cmd.Parameters.AddWithValue("@password", hashedPassword)
+                cmd.Parameters.AddWithValue("@user_pin", hashedPin)
                 cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim())
                 cmd.Parameters.AddWithValue("@email", txtUserEmail.Text.Trim())
                 cmd.Parameters.AddWithValue("@position", If(cbUserPosition.SelectedItem IsNot Nothing, cbUserPosition.SelectedItem.ToString().Trim(), String.Empty))
@@ -94,15 +107,62 @@ Public Class UserFrm
     End Sub
 
     Private Sub UpdateUser()
-        Dim query As String = "UPDATE 02_pos_users SET username = @username, password = @password, user_pin = @user_pin, " &
+        ' For update, we need to handle password update carefully
+        Dim passwordChanged As Boolean = False
+        Dim pinChanged As Boolean = False
+        Dim originalPassword As String = String.Empty
+        Dim originalPin As String = String.Empty
+
+        ' Get the original values from the database
+        Using connection As New MySqlConnection(ConnectionString)
+            Dim query As String = "SELECT password, user_pin FROM 02_pos_users WHERE id = @id"
+            Using cmd As New MySqlCommand(query, connection)
+                cmd.Parameters.AddWithValue("@id", SelectedUserId)
+                connection.Open()
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        originalPassword = reader("password").ToString()
+                        originalPin = reader("user_pin").ToString()
+                    End If
+                End Using
+            End Using
+        End Using
+
+        ' Check if the password has changed
+        passwordChanged = txtPassword.Text.Trim() <> originalPassword
+        pinChanged = txtPin.Text.Trim() <> originalPin
+
+        ' Hash the new password/pin if they've changed
+        Dim hashedPassword As String = originalPassword
+        Dim hashedPin As String = originalPin
+
+        If passwordChanged Then
+            Try
+                hashedPassword = BCrypt.Net.BCrypt.HashPassword(txtPassword.Text.Trim())
+            Catch ex As Exception
+                MessageBox.Show("Error occurred while processing password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End Try
+        End If
+
+        If pinChanged Then
+            Try
+                hashedPin = BCrypt.Net.BCrypt.HashPassword(txtPin.Text.Trim())
+            Catch ex As Exception
+                MessageBox.Show("Error occurred while processing PIN. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Return
+            End Try
+        End If
+
+        Dim updateQuery As String = "UPDATE 02_pos_users SET username = @username, password = @password, user_pin = @user_pin, " &
                              "fullname = @fullname, email = @email, position = @position, gender = @gender, " &
                              "creator_id = @creator_id WHERE id = @id"
 
         Using connection As New MySqlConnection(ConnectionString)
-            Using cmd As New MySqlCommand(query, connection)
+            Using cmd As New MySqlCommand(updateQuery, connection)
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text.Trim())
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text.Trim())
-                cmd.Parameters.AddWithValue("@user_pin", txtPin.Text.Trim())
+                cmd.Parameters.AddWithValue("@password", hashedPassword)
+                cmd.Parameters.AddWithValue("@user_pin", hashedPin)
                 cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim())
                 cmd.Parameters.AddWithValue("@email", txtUserEmail.Text.Trim())
                 cmd.Parameters.AddWithValue("@position", If(cbUserPosition.SelectedItem IsNot Nothing, cbUserPosition.SelectedItem.ToString().Trim(), String.Empty))
@@ -160,9 +220,13 @@ Public Class UserFrm
             Dim row As DataGridViewRow = dgvUsers.Rows(e.RowIndex)
             SelectedUserId = Convert.ToInt32(row.Cells("id").Value)
             txtUsername.Text = row.Cells("username").Value.ToString()
-            txtPassword.Text = row.Cells("password").Value.ToString()
-            txtConfirmPassword.Text = row.Cells("password").Value.ToString()
-            txtPin.Text = row.Cells("user_pin").Value.ToString()
+
+            ' Note: We don't want to display the actual hashed password
+            ' Instead, we'll just show a placeholder
+            txtPassword.Text = "••••••••"
+            txtConfirmPassword.Text = "••••••••"
+            txtPin.Text = "••••"
+
             txtFullName.Text = row.Cells("fullname").Value.ToString()
             txtUserEmail.Text = row.Cells("email").Value.ToString()
             cbUserPosition.SelectedItem = row.Cells("position").Value.ToString()
